@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Dec21Console.GCclass;
 
 namespace Dec21Console
 {
@@ -36,7 +37,14 @@ namespace Dec21Console
             ConstructWithoutThis conWotThis = new ConstructWithoutThis();
             ConstructWithoutThis conWotThis2 = new ConstructWithoutThis(1, "Naveen");
             ConstructWithoutThis conWotThis3=new ConstructWithoutThis(1, "Naveen", "N@gmail.com", "3265984512");
-            Console.Read();
+
+            Console.WriteLine("GC class GC.Collect()");
+            ChildClass gCclass = new ChildClass();
+            gCclass = null;
+            //GC.Collect();
+           
+            
+            Console.ReadLine();
         }
     }
 }
